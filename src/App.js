@@ -48,6 +48,7 @@ const apiKey = "f13fba2800b1086c378e3a7b25805d1f"
            onClick={handleSearch}>Search</button>
         </div>
         </div>
+        {Object.keys(data).length > 0 &&
         <div className='col-md-12 text-center mt-5'>
          <div className='shadow rounded weatherResultBox'>
           <img className='weatherIcon' src={img1} alt=''/>
@@ -55,6 +56,7 @@ const apiKey = "f13fba2800b1086c378e3a7b25805d1f"
           <h6 className='weatherTemp'>{((data.main.temp) - 273.15).toFixed(2)} °C</h6>
           </div> 
         </div>
+        }
 
     </div>
     
